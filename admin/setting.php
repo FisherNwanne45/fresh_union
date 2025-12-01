@@ -251,8 +251,9 @@ if (isset($_POST['save_settings'])) {
 
                             <div class="form-group">
                                 <label>Livechat Code</label>
-                                <input type="text" class="form-control" name="tawk" value="<?= $page['tawk'] ?>"
-                                    placeholder="<?= $page['tawk'] ?>">
+                                <input type="text" class="form-control" name="tawk"
+                                    value="<?= htmlspecialchars($page['tawk']) ?>" placeholder="Enter Livechat Code">
+
                             </div>
 
 
