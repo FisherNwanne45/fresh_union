@@ -1,0 +1,379 @@
+[06-Dec-2022 09:22:59 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/extravao/public_html/admin/layout/header.php:18
+Stack trace:
+#0 /home2/extravao/public_html/admin/credit_debit_trans.php(7): include()
+#1 {main}
+  thrown in /home2/extravao/public_html/admin/layout/header.php on line 18
+[06-Dec-2022 09:23:03 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/extravao/public_html/admin/layout/header.php:18
+Stack trace:
+#0 /home2/extravao/public_html/admin/view-deposit.php(7): include()
+#1 {main}
+  thrown in /home2/extravao/public_html/admin/layout/header.php on line 18
+[06-Dec-2022 09:23:06 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/extravao/public_html/admin/layout/header.php:18
+Stack trace:
+#0 /home2/extravao/public_html/admin/deposit.php(7): include()
+#1 {main}
+  thrown in /home2/extravao/public_html/admin/layout/header.php on line 18
+[06-Dec-2022 09:23:09 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/extravao/public_html/admin/layout/header.php:18
+Stack trace:
+#0 /home2/extravao/public_html/admin/deposit.php(7): include()
+#1 {main}
+  thrown in /home2/extravao/public_html/admin/layout/header.php on line 18
+[06-Dec-2022 09:23:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/extravao/public_html/admin/layout/header.php:18
+Stack trace:
+#0 /home2/extravao/public_html/admin/fundings.php(7): include()
+#1 {main}
+  thrown in /home2/extravao/public_html/admin/layout/header.php on line 18
+[06-Dec-2022 09:23:25 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/extravao/public_html/admin/layout/header.php:18
+Stack trace:
+#0 /home2/extravao/public_html/admin/fundings.php(7): include()
+#1 {main}
+  thrown in /home2/extravao/public_html/admin/layout/header.php on line 18
+[29-Jul-2023 17:05:09 America/New_York] PHP Warning:  Undefined array key "admin" in /home/atlaabdb/public_html/admin/layout/header.php on line 9
+[30-Jul-2023 19:32:46 America/New_York] PHP Warning:  Undefined array key "admin" in /home/atlaabdb/public_html/admin/layout/header.php on line 9
+[31-Jul-2023 18:09:45 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/atlaabdb/public_html/admin/delete_user.php:18
+Stack trace:
+#0 /home/atlaabdb/public_html/admin/delete_user.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/atlaabdb/public_html/admin/delete_user.php on line 18
+[31-Jul-2023 18:10:08 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/atlaabdb/public_html/admin/delete_user.php:18
+Stack trace:
+#0 /home/atlaabdb/public_html/admin/delete_user.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/atlaabdb/public_html/admin/delete_user.php on line 18
+[31-Jul-2023 18:10:17 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/atlaabdb/public_html/admin/delete_user.php:18
+Stack trace:
+#0 /home/atlaabdb/public_html/admin/delete_user.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/atlaabdb/public_html/admin/delete_user.php on line 18
+[31-Jul-2023 18:12:55 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/atlaabdb/public_html/admin/delete_user.php:18
+Stack trace:
+#0 /home/atlaabdb/public_html/admin/delete_user.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/atlaabdb/public_html/admin/delete_user.php on line 18
+[31-Jul-2023 18:14:26 America/New_York] PHP Warning:  Undefined array key "domesticfee" in /home/atlaabdb/public_html/admin/smtp_settings.php on line 134
+[31-Jul-2023 18:14:40 America/New_York] PHP Warning:  Undefined array key "admin" in /home/atlaabdb/public_html/admin/layout/header.php on line 9
+[31-Jul-2023 18:19:12 America/New_York] PHP Warning:  Undefined variable $n in /home/atlaabdb/public_html/admin/createuser.php on line 84
+[31-Jul-2023 18:21:56 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/atlaabdb/public_html/admin/delete_user.php:18
+Stack trace:
+#0 /home/atlaabdb/public_html/admin/delete_user.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/atlaabdb/public_html/admin/delete_user.php on line 18
+[31-Jul-2023 18:22:11 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/atlaabdb/public_html/admin/delete_user.php:18
+Stack trace:
+#0 /home/atlaabdb/public_html/admin/delete_user.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/atlaabdb/public_html/admin/delete_user.php on line 18
+[31-Jul-2023 19:19:57 America/New_York] PHP Warning:  Undefined variable $n in /home/atlaabdb/public_html/admin/createuser.php on line 84
+[01-Aug-2023 05:00:32 America/New_York] PHP Warning:  Undefined array key "domesticfee" in /home/atlaabdb/public_html/admin/smtp_settings.php on line 134
+[01-Aug-2023 05:04:54 America/New_York] PHP Warning:  Undefined array key "domesticfee" in /home/atlaabdb/public_html/admin/smtp_settings.php on line 134
+[01-Aug-2023 05:05:30 America/New_York] PHP Warning:  Undefined array key "domesticfee" in /home/atlaabdb/public_html/admin/smtp_settings.php on line 134
+[01-Aug-2023 05:05:36 America/New_York] PHP Warning:  Undefined array key "domesticfee" in /home/atlaabdb/public_html/admin/smtp_settings.php on line 134
+[01-Aug-2023 05:05:56 America/New_York] PHP Warning:  Undefined array key "domesticfee" in /home/atlaabdb/public_html/admin/smtp_settings.php on line 134
+[01-Aug-2023 05:17:54 America/New_York] PHP Warning:  Undefined array key "cot_code" in /home/atlaabdb/public_html/admin/setting.php on line 192
+[01-Aug-2023 05:17:54 America/New_York] PHP Warning:  Undefined array key "cot_code" in /home/atlaabdb/public_html/admin/setting.php on line 193
+[01-Aug-2023 05:17:54 America/New_York] PHP Warning:  Undefined array key "tax_code" in /home/atlaabdb/public_html/admin/setting.php on line 249
+[01-Aug-2023 05:17:54 America/New_York] PHP Warning:  Undefined array key "tax_code" in /home/atlaabdb/public_html/admin/setting.php on line 250
+[01-Aug-2023 05:17:54 America/New_York] PHP Warning:  Undefined array key "imf_code" in /home/atlaabdb/public_html/admin/setting.php on line 259
+[01-Aug-2023 05:17:54 America/New_York] PHP Warning:  Undefined array key "imf_code" in /home/atlaabdb/public_html/admin/setting.php on line 260
+[01-Aug-2023 05:18:01 America/New_York] PHP Warning:  Undefined array key "cot_code" in /home/atlaabdb/public_html/admin/setting.php on line 192
+[01-Aug-2023 05:18:01 America/New_York] PHP Warning:  Undefined array key "cot_code" in /home/atlaabdb/public_html/admin/setting.php on line 193
+[01-Aug-2023 05:18:01 America/New_York] PHP Warning:  Undefined array key "tax_code" in /home/atlaabdb/public_html/admin/setting.php on line 249
+[01-Aug-2023 05:18:01 America/New_York] PHP Warning:  Undefined array key "tax_code" in /home/atlaabdb/public_html/admin/setting.php on line 250
+[01-Aug-2023 05:18:01 America/New_York] PHP Warning:  Undefined array key "imf_code" in /home/atlaabdb/public_html/admin/setting.php on line 259
+[01-Aug-2023 05:18:01 America/New_York] PHP Warning:  Undefined array key "imf_code" in /home/atlaabdb/public_html/admin/setting.php on line 260
+[01-Aug-2023 07:13:13 America/New_York] PHP Warning:  Undefined array key "admin" in /home/atlaabdb/public_html/admin/layout/header.php on line 9
+[01-Aug-2023 07:13:20 America/New_York] PHP Warning:  Undefined array key "cot_code" in /home/atlaabdb/public_html/admin/setting.php on line 192
+[01-Aug-2023 07:13:20 America/New_York] PHP Warning:  Undefined array key "cot_code" in /home/atlaabdb/public_html/admin/setting.php on line 193
+[01-Aug-2023 07:13:20 America/New_York] PHP Warning:  Undefined array key "tax_code" in /home/atlaabdb/public_html/admin/setting.php on line 249
+[01-Aug-2023 07:13:20 America/New_York] PHP Warning:  Undefined array key "tax_code" in /home/atlaabdb/public_html/admin/setting.php on line 250
+[01-Aug-2023 07:13:20 America/New_York] PHP Warning:  Undefined array key "imf_code" in /home/atlaabdb/public_html/admin/setting.php on line 259
+[01-Aug-2023 07:13:20 America/New_York] PHP Warning:  Undefined array key "imf_code" in /home/atlaabdb/public_html/admin/setting.php on line 260
+[01-Aug-2023 07:21:26 America/New_York] PHP Warning:  Undefined array key "code1" in /home/atlaabdb/public_html/admin/setting.php on line 190
+[01-Aug-2023 07:21:26 America/New_York] PHP Warning:  Undefined array key "code2" in /home/atlaabdb/public_html/admin/setting.php on line 196
+[01-Aug-2023 07:21:26 America/New_York] PHP Warning:  Undefined array key "code3" in /home/atlaabdb/public_html/admin/setting.php on line 202
+[01-Aug-2023 07:28:49 America/New_York] PHP Warning:  Undefined array key "code1" in /home/atlaabdb/public_html/admin/setting.php on line 51
+[01-Aug-2023 07:28:49 America/New_York] PHP Warning:  Undefined array key "code2" in /home/atlaabdb/public_html/admin/setting.php on line 52
+[01-Aug-2023 07:28:49 America/New_York] PHP Warning:  Undefined array key "code3" in /home/atlaabdb/public_html/admin/setting.php on line 53
+[01-Aug-2023 07:34:52 America/New_York] PHP Warning:  Undefined array key "url_address" in /home/atlaabdb/public_html/admin/setting.php on line 54
+[01-Aug-2023 07:35:03 America/New_York] PHP Warning:  Undefined array key "domesticfee" in /home/atlaabdb/public_html/admin/smtp_settings.php on line 134
+[01-Aug-2023 07:35:07 America/New_York] PHP Warning:  Undefined array key "domesticfee" in /home/atlaabdb/public_html/admin/smtp_settings.php on line 134
+[01-Aug-2023 07:37:14 America/New_York] PHP Warning:  Undefined array key "url_address" in /home/atlaabdb/public_html/admin/setting.php on line 54
+[01-Aug-2023 07:43:12 America/New_York] PHP Warning:  Undefined array key "domesticfee" in /home/atlaabdb/public_html/admin/smtp_settings.php on line 134
+[01-Aug-2023 07:55:04 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 07:55:04 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 14:26:06 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 14:26:06 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 14:29:09 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/atlaabdb/public_html/admin/delete_user.php:18
+Stack trace:
+#0 /home/atlaabdb/public_html/admin/delete_user.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/atlaabdb/public_html/admin/delete_user.php on line 18
+[01-Aug-2023 14:29:29 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 14:29:29 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 14:30:15 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 14:30:15 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 14:45:43 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 14:45:43 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 14:46:40 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 14:46:40 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 14:47:22 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 14:47:22 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 14:47:31 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 14:47:31 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 14:48:09 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 14:48:09 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 14:48:27 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 14:48:27 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 14:48:48 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 14:48:48 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 14:48:56 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 14:48:56 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 14:49:39 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 14:49:39 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 14:49:47 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 14:49:47 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 14:50:05 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 14:50:05 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 14:53:57 America/New_York] PHP Warning:  Undefined variable $n in /home/atlaabdb/public_html/admin/createuser.php on line 84
+[01-Aug-2023 14:54:54 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 14:54:54 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 14:55:23 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 14:55:23 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 14:55:29 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 14:55:29 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 14:55:37 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 14:55:37 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 14:56:28 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 14:56:28 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 14:56:44 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 14:56:44 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 14:57:15 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 14:57:15 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 14:57:36 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 14:57:36 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 15:02:56 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 15:02:56 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 15:15:34 America/New_York] PHP Warning:  Undefined variable $n in /home/atlaabdb/public_html/admin/createuser.php on line 84
+[01-Aug-2023 15:16:06 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 15:16:06 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 15:16:27 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 15:16:27 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 15:16:33 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 15:16:33 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 15:16:46 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 15:16:46 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 15:17:48 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 15:17:48 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 15:18:03 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 15:18:03 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 15:20:25 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 15:20:25 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 15:38:10 America/New_York] PHP Warning:  Undefined variable $n in /home/atlaabdb/public_html/admin/createuser.php on line 84
+[01-Aug-2023 15:41:08 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 15:41:08 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 15:41:34 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 15:41:34 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 15:41:47 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 15:41:47 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 15:41:54 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 15:41:54 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 15:42:03 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 15:42:03 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 15:42:22 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 15:42:22 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 15:43:17 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 15:43:17 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 15:43:34 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 15:43:34 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 15:45:38 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 15:45:38 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 16:22:12 America/New_York] PHP Warning:  Undefined variable $n in /home/atlaabdb/public_html/admin/createuser.php on line 84
+[01-Aug-2023 16:25:44 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 16:25:44 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 16:26:03 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 16:26:03 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 16:26:13 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 16:26:13 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 16:26:33 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 16:26:33 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 16:26:46 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 16:26:46 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 16:28:40 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 16:28:40 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 16:29:18 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 16:29:18 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 16:29:39 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 16:29:39 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 16:49:48 America/New_York] PHP Warning:  Undefined array key "admin" in /home/atlaabdb/public_html/admin/layout/header.php on line 9
+[01-Aug-2023 16:51:59 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 16:51:59 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 16:52:16 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 16:52:16 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 16:53:55 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 16:53:55 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 16:54:22 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 16:54:22 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 16:56:48 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 16:56:48 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 16:57:03 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 16:57:03 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 17:03:08 America/New_York] PHP Warning:  Undefined variable $n in /home/atlaabdb/public_html/admin/createuser.php on line 84
+[01-Aug-2023 17:03:27 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 17:03:27 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 17:03:50 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 17:03:50 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 17:03:58 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 17:03:58 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 17:04:16 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 17:04:16 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 17:04:27 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 17:04:27 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 17:04:39 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 17:04:39 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 17:05:37 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 17:05:37 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 17:07:20 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 17:07:20 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 19:40:59 America/New_York] PHP Warning:  Undefined array key "admin" in /home/atlaabdb/public_html/admin/layout/header.php on line 9
+[01-Aug-2023 19:52:44 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 450
+[01-Aug-2023 19:52:44 America/New_York] PHP Warning:  Undefined array key "old_pass" in /home/atlaabdb/public_html/admin/view_users.php on line 458
+[01-Aug-2023 20:25:12 America/New_York] PHP Warning:  Undefined array key "domesticfee" in /home/atlaabdb/public_html/admin/smtp_settings.php on line 134
+[01-Aug-2023 20:28:08 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/atlaabdb/public_html/admin/delete_user.php:18
+Stack trace:
+#0 /home/atlaabdb/public_html/admin/delete_user.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/atlaabdb/public_html/admin/delete_user.php on line 18
+[01-Aug-2023 20:28:26 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/atlaabdb/public_html/admin/delete_user.php:18
+Stack trace:
+#0 /home/atlaabdb/public_html/admin/delete_user.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/atlaabdb/public_html/admin/delete_user.php on line 18
+[01-Aug-2023 20:29:27 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/atlaabdb/public_html/admin/delete_credit.php:10
+Stack trace:
+#0 /home/atlaabdb/public_html/admin/delete_credit.php(10): PDOStatement->execute()
+#1 {main}
+  thrown in /home/atlaabdb/public_html/admin/delete_credit.php on line 10
+[01-Aug-2023 20:29:31 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/atlaabdb/public_html/admin/delete_credit.php:10
+Stack trace:
+#0 /home/atlaabdb/public_html/admin/delete_credit.php(10): PDOStatement->execute()
+#1 {main}
+  thrown in /home/atlaabdb/public_html/admin/delete_credit.php on line 10
+[01-Aug-2023 20:29:39 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/atlaabdb/public_html/admin/delete_user.php:18
+Stack trace:
+#0 /home/atlaabdb/public_html/admin/delete_user.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/atlaabdb/public_html/admin/delete_user.php on line 18
+[01-Aug-2023 21:05:52 America/New_York] PHP Warning:  Undefined variable $name in /home/atlaabdb/public_html/admin/view_users.php on line 60
+[01-Aug-2023 21:14:55 America/New_York] PHP Warning:  Undefined variable $name in /home/atlaabdb/public_html/admin/view_users.php on line 60
+[01-Aug-2023 21:50:41 America/New_York] PHP Warning:  Undefined array key "admin" in /home/atlaabdb/public_html/admin/layout/header.php on line 9
+[01-Aug-2023 22:13:38 America/New_York] PHP Warning:  Undefined variable $name in /home/atlaabdb/public_html/admin/view_users.php on line 79
+[01-Aug-2023 22:35:50 America/New_York] PHP Warning:  Undefined variable $name in /home/atlaabdb/public_html/admin/view_users.php on line 79
+[01-Aug-2023 22:53:44 America/New_York] PHP Warning:  Undefined variable $userRow in /home/atlaabdb/public_html/admin/view_users.php on line 4
+[01-Aug-2023 22:53:44 America/New_York] PHP Warning:  Trying to access array offset on value of type null in /home/atlaabdb/public_html/admin/layout/header.php on line 53
+[01-Aug-2023 22:53:44 America/New_York] PHP Warning:  Trying to access array offset on value of type null in /home/atlaabdb/public_html/admin/layout/header.php on line 57
+[01-Aug-2023 22:53:44 America/New_York] PHP Warning:  Trying to access array offset on value of type null in /home/atlaabdb/public_html/admin/layout/header.php on line 60
+[01-Aug-2023 22:54:35 America/New_York] PHP Warning:  Undefined variable $userRow in /home/atlaabdb/public_html/admin/view_users.php on line 19
+[01-Aug-2023 22:54:35 America/New_York] PHP Warning:  Trying to access array offset on value of type null in /home/atlaabdb/public_html/admin/layout/header.php on line 53
+[01-Aug-2023 22:54:35 America/New_York] PHP Warning:  Trying to access array offset on value of type null in /home/atlaabdb/public_html/admin/layout/header.php on line 57
+[01-Aug-2023 22:54:35 America/New_York] PHP Warning:  Trying to access array offset on value of type null in /home/atlaabdb/public_html/admin/layout/header.php on line 60
+[01-Aug-2023 23:26:37 America/New_York] PHP Warning:  Undefined array key "domesticfee" in /home/atlaabdb/public_html/admin/smtp_settings.php on line 134
+[02-Aug-2023 08:45:33 America/New_York] PHP Warning:  Undefined variable $name in /home/atlaabdb/public_html/admin/view_users.php on line 79
+[02-Aug-2023 08:58:21 America/New_York] PHP Warning:  Undefined variable $name in /home/atlaabdb/public_html/admin/view_users.php on line 79
+[02-Aug-2023 09:03:25 America/New_York] PHP Warning:  Undefined variable $name in /home/atlaabdb/public_html/admin/view_users.php on line 79
+[02-Aug-2023 09:06:10 America/New_York] PHP Warning:  Undefined variable $name in /home/atlaabdb/public_html/admin/view_users.php on line 79
+[02-Aug-2023 09:08:47 America/New_York] PHP Warning:  Undefined variable $name in /home/atlaabdb/public_html/admin/view_users.php on line 79
+[02-Aug-2023 09:10:44 America/New_York] PHP Warning:  Undefined variable $name in /home/atlaabdb/public_html/admin/view_users.php on line 79
+[02-Aug-2023 09:14:20 America/New_York] PHP Warning:  Undefined variable $name in /home/atlaabdb/public_html/admin/view_users.php on line 79
+[02-Aug-2023 09:15:10 America/New_York] PHP Warning:  Undefined variable $name in /home/atlaabdb/public_html/admin/view_users.php on line 79
+[02-Aug-2023 09:18:31 America/New_York] PHP Warning:  Undefined variable $name in /home/atlaabdb/public_html/admin/view_users.php on line 79
+[02-Aug-2023 09:19:20 America/New_York] PHP Warning:  Undefined variable $name in /home/atlaabdb/public_html/admin/view_users.php on line 79
+[02-Aug-2023 09:31:21 America/New_York] PHP Warning:  Undefined variable $name in /home/atlaabdb/public_html/admin/view_users.php on line 79
+[02-Aug-2023 09:32:32 America/New_York] PHP Warning:  Undefined variable $name in /home/atlaabdb/public_html/admin/view_users.php on line 79
+[02-Aug-2023 11:39:37 America/New_York] PHP Warning:  Undefined array key "admin" in /home/atlaabdb/public_html/admin/layout/header.php on line 9
+[02-Aug-2023 11:45:09 America/New_York] PHP Warning:  Undefined array key "domesticfee" in /home/atlaabdb/public_html/admin/smtp_settings.php on line 134
+[02-Aug-2023 12:09:08 America/New_York] PHP Warning:  Undefined array key "admin" in /home/atlaabdb/public_html/admin/layout/header.php on line 9
+[02-Aug-2023 12:29:01 America/New_York] PHP Warning:  Undefined array key "transfer" in /home/atlaabdb/public_html/admin/view_users.php on line 134
+[02-Aug-2023 12:33:24 America/New_York] PHP Warning:  Undefined array key "transfer" in /home/atlaabdb/public_html/admin/view_users.php on line 134
+[02-Aug-2023 14:25:04 America/New_York] PHP Warning:  Undefined array key "admin" in /home/atlaabdb/public_html/admin/layout/header.php on line 9
+[02-Aug-2023 19:58:06 America/New_York] PHP Warning:  Undefined array key "admin" in /home/atlaabdb/public_html/admin/layout/header.php on line 9
+[02-Aug-2023 19:58:20 America/New_York] PHP Warning:  Undefined array key "domesticfee" in /home/atlaabdb/public_html/admin/smtp_settings.php on line 134
+[02-Aug-2023 19:59:34 America/New_York] PHP Warning:  Undefined array key "port" in /home/atlaabdb/public_html/admin/smtp_settings.php on line 26
+[02-Aug-2023 19:59:34 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'host' in 'field list' in /home/atlaabdb/public_html/admin/smtp_settings.php:39
+Stack trace:
+#0 /home/atlaabdb/public_html/admin/smtp_settings.php(39): PDOStatement->execute()
+#1 {main}
+  thrown in /home/atlaabdb/public_html/admin/smtp_settings.php on line 39
+[02-Aug-2023 19:59:37 America/New_York] PHP Warning:  Undefined array key "port" in /home/atlaabdb/public_html/admin/smtp_settings.php on line 26
+[02-Aug-2023 19:59:37 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'host' in 'field list' in /home/atlaabdb/public_html/admin/smtp_settings.php:39
+Stack trace:
+#0 /home/atlaabdb/public_html/admin/smtp_settings.php(39): PDOStatement->execute()
+#1 {main}
+  thrown in /home/atlaabdb/public_html/admin/smtp_settings.php on line 39
+[02-Aug-2023 20:00:19 America/New_York] PHP Warning:  Undefined array key "domesticfee" in /home/atlaabdb/public_html/admin/smtp_settings.php on line 134
+[02-Aug-2023 20:05:31 America/New_York] PHP Warning:  Undefined array key "port" in /home/atlaabdb/public_html/admin/smtp_settings.php on line 26
+[02-Aug-2023 20:05:31 America/New_York] PHP Warning:  Undefined array key "domesticfee" in /home/atlaabdb/public_html/admin/smtp_settings.php on line 134
+[02-Aug-2023 20:05:40 America/New_York] PHP Warning:  Undefined array key "domesticfee" in /home/atlaabdb/public_html/admin/smtp_settings.php on line 134
+[03-Aug-2023 06:52:04 America/New_York] PHP Warning:  Undefined array key "account_type" in /home/atlaabdb/public_html/admin/view-credtrans.php on line 195
+[03-Aug-2023 15:05:17 America/New_York] PHP Warning:  Undefined array key "admin" in /home/atlaabdb/public_html/admin/layout/header.php on line 9
+[03-Aug-2023 15:24:49 America/New_York] PHP Warning:  Undefined variable $userStatus in /home/atlaabdb/public_html/admin/include/adminClass.php on line 1147
+[03-Aug-2023 15:32:29 America/New_York] PHP Warning:  Undefined variable $userStatus in /home/atlaabdb/public_html/admin/include/adminClass.php on line 1147
+[03-Aug-2023 15:40:46 America/New_York] PHP Fatal error:  Cannot redeclare userStatus() (previously declared in /home/atlaabdb/public_html/admin/layout/header.php:51) in /home/atlaabdb/public_html/admin/view_users.php on line 311
+[03-Aug-2023 15:41:51 America/New_York] PHP Warning:  Undefined variable $acct_status in /home/atlaabdb/public_html/admin/include/adminClass.php on line 1538
+[03-Aug-2023 16:10:15 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function AdminRegisterMsg() in /home/atlaabdb/public_html/admin/view_users.php:319
+Stack trace:
+#0 {main}
+  thrown in /home/atlaabdb/public_html/admin/view_users.php on line 319
+[03-Aug-2023 16:33:55 America/New_York] PHP Warning:  Undefined array key "admin" in /home/atlaabdb/public_html/admin/layout/header.php on line 9
+[03-Aug-2023 19:52:18 America/New_York] PHP Warning:  Undefined variable $n in /home/atlaabdb/public_html/admin/createuser.php on line 103
+[03-Aug-2023 19:52:18 America/New_York] PHP Warning:  Undefined variable $n2 in /home/atlaabdb/public_html/admin/createuser.php on line 104
+[03-Aug-2023 19:52:18 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'acct_image2' cannot be null in /home/atlaabdb/public_html/admin/createuser.php:104
+Stack trace:
+#0 /home/atlaabdb/public_html/admin/createuser.php(104): PDOStatement->execute()
+#1 {main}
+  thrown in /home/atlaabdb/public_html/admin/createuser.php on line 104
+[03-Aug-2023 19:54:00 America/New_York] PHP Warning:  Undefined variable $n in /home/atlaabdb/public_html/admin/createuser.php on line 103
+[03-Aug-2023 19:54:00 America/New_York] PHP Warning:  Undefined variable $n2 in /home/atlaabdb/public_html/admin/createuser.php on line 104
+[03-Aug-2023 19:54:00 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'acct_image2' cannot be null in /home/atlaabdb/public_html/admin/createuser.php:104
+Stack trace:
+#0 /home/atlaabdb/public_html/admin/createuser.php(104): PDOStatement->execute()
+#1 {main}
+  thrown in /home/atlaabdb/public_html/admin/createuser.php on line 104
+[03-Aug-2023 19:58:50 America/New_York] PHP Warning:  Undefined variable $n in /home/atlaabdb/public_html/admin/createuser.php on line 103
+[03-Aug-2023 19:58:50 America/New_York] PHP Warning:  Undefined variable $n2 in /home/atlaabdb/public_html/admin/createuser.php on line 104
+[03-Aug-2023 19:58:50 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'acct_image2' cannot be null in /home/atlaabdb/public_html/admin/createuser.php:104
+Stack trace:
+#0 /home/atlaabdb/public_html/admin/createuser.php(104): PDOStatement->execute()
+#1 {main}
+  thrown in /home/atlaabdb/public_html/admin/createuser.php on line 104
+[03-Aug-2023 20:01:32 America/New_York] PHP Warning:  Undefined variable $n in /home/atlaabdb/public_html/admin/createuser.php on line 103
+[03-Aug-2023 20:01:32 America/New_York] PHP Warning:  Undefined variable $n2 in /home/atlaabdb/public_html/admin/createuser.php on line 104
+[03-Aug-2023 20:01:32 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'acct_image2' cannot be null in /home/atlaabdb/public_html/admin/createuser.php:104
+Stack trace:
+#0 /home/atlaabdb/public_html/admin/createuser.php(104): PDOStatement->execute()
+#1 {main}
+  thrown in /home/atlaabdb/public_html/admin/createuser.php on line 104
+[04-Aug-2023 03:56:46 America/New_York] PHP Warning:  Undefined array key "admin" in /home/atlaabdb/public_html/admin/layout/header.php on line 9
+[22-Aug-2023 01:48:03 UTC] PHP Warning:  Undefined array key "admin" in /home/znctogas/public_html/admin/layout/header.php on line 9
+[27-Aug-2023 00:21:14 UTC] PHP Warning:  Undefined array key "admin" in /home/znctogas/public_html/admin/layout/header.php on line 9
+[29-Aug-2023 18:28:31 UTC] PHP Warning:  Undefined array key "admin" in /home/znctogas/public_html/admin/layout/header.php on line 9
+[29-Aug-2023 18:55:40 UTC] PHP Warning:  Undefined array key "admin" in /home/znctogas/public_html/admin/layout/header.php on line 9
+[29-Aug-2023 19:53:50 UTC] PHP Warning:  Undefined array key "admin" in /home/znctogas/public_html/admin/layout/header.php on line 9
+[29-Aug-2023 20:25:00 UTC] PHP Warning:  Undefined variable $name in /home/znctogas/public_html/admin/view_users.php on line 79
+[29-Aug-2023 21:03:53 UTC] PHP Warning:  Undefined array key "admin" in /home/znctogas/public_html/admin/layout/header.php on line 9
+[29-Aug-2023 21:47:43 UTC] PHP Warning:  Undefined array key "admin" in /home/znctogas/public_html/admin/layout/header.php on line 9
+[30-Aug-2023 00:21:16 UTC] PHP Warning:  Undefined array key "admin" in /home/znctogas/public_html/admin/layout/header.php on line 9
+[30-Aug-2023 20:54:07 UTC] PHP Warning:  Undefined array key "admin" in /home/znctogas/public_html/admin/layout/header.php on line 9
+[30-Aug-2023 23:40:13 UTC] PHP Warning:  Undefined array key "admin" in /home/znctogas/public_html/admin/layout/header.php on line 9
+[31-Aug-2023 01:10:07 UTC] PHP Warning:  Undefined array key "admin" in /home/znctogas/public_html/admin/layout/header.php on line 9
+[31-Aug-2023 09:09:58 UTC] PHP Warning:  Undefined array key "admin" in /home/znctogas/public_html/admin/layout/header.php on line 9
+[31-Aug-2023 15:45:50 UTC] PHP Warning:  Undefined array key "admin" in /home/znctogas/public_html/admin/layout/header.php on line 9
+[01-Sep-2023 01:28:28 UTC] PHP Notice:  Undefined index: admin in /home/znctogas/public_html/admin/layout/header.php on line 9
+[02-Sep-2023 00:55:55 America/New_York] PHP Notice:  Undefined index: twillio_status in /home/corpsswf/daesisavings.com/admin/setting.php on line 64
+[02-Sep-2023 04:54:52 America/New_York] PHP Notice:  Undefined index: admin in /home/corpsswf/daesisavings.com/admin/layout/header.php on line 9
+[17-Sep-2023 13:27:42 America/New_York] PHP Notice:  Undefined index: twillio_status in /home/auroinnq/providencetb.com/admin/setting.php on line 64
+[12-Nov-2023 18:12:10 UTC] PHP Warning:  move_uploaded_file(../page/logo.png): Failed to open stream: No such file or directory in /home/ibisxviu/public_html/admin/setting.php on line 30
+[12-Nov-2023 18:12:10 UTC] PHP Warning:  move_uploaded_file(): Unable to move &quot;/tmp/php2E4R94&quot; to &quot;../page/logo.png&quot; in /home/ibisxviu/public_html/admin/setting.php on line 30
+[12-Nov-2023 18:15:49 UTC] PHP Warning:  Undefined array key "twillio_status" in /home/ibisxviu/public_html/admin/setting.php on line 64
+[12-Nov-2023 18:44:22 UTC] PHP Warning:  Undefined array key "admin" in /home/ibisxviu/public_html/admin/layout/header.php on line 9
+[25-Nov-2023 14:57:32 UTC] PHP Warning:  Undefined array key "twillio_status" in /home/britpzvn/heritagesavingsintl.com/admin/setting.php on line 64
+[25-Nov-2023 18:31:02 UTC] PHP Warning:  Undefined array key "admin" in /home/britpzvn/heritagesavingsintl.com/admin/layout/header.php on line 9

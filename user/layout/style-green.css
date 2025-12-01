@@ -1,0 +1,9 @@
+/* style-green.css - Green Theme */
+:root {
+  --primary: #059669;
+  --primary-dark: #047857;
+  --primary-light: #d1fae5;
+  --primary-bg: #f0fdf4;
+}
+
+/* Any green-specific overrides if needed */

@@ -1,0 +1,7 @@
+/* style-blue.css - Blue Theme (Default) */
+:root {
+  --primary: #4f46e5;
+  --primary-dark: #1e40af;
+  --primary-light: #dbeafe;
+  --primary-bg: #eff6ff;
+}

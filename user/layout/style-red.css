@@ -1,0 +1,9 @@
+/* style-red.css - Red Theme */
+:root {
+  --primary: #e41414;
+  --primary-dark: #b91c1c;
+  --primary-light: #fecaca;
+  --primary-bg: #fef2f2;
+}
+
+/* Any red-specific overrides if needed */
