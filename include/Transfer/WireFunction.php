@@ -36,6 +36,9 @@ if (isset($_POST['wire-transfer'])) {
     $routine_number = $_POST['routine_number'];
     $description = $_POST['description'];
     $swift_code = $_POST['swift_code'];
+    $APP_NAME = WEB_TITLE;
+    $APP_URL = WEB_URL;
+    $APP_EMAIL = WEB_EMAIL;
 
     $checkFee = ($amount + $WireFee);
 
@@ -53,6 +56,23 @@ if (isset($_POST['wire-transfer'])) {
         $transaction_type = "debit";
         $trans_status = "pending";
         $sql = "INSERT INTO temp_trans (amount,refrence_id,description,user_id,bank_name,account_name,account_number,account_type,bank_country,trans_type,transaction_type,trans_status,routine_number,swift_code) VALUES(:amount,:refrence_id,:description,:user_id,:bank_name,:account_name,:account_number,:account_type,:bank_country,:trans_type,:transaction_type,:trans_status,:routine_number,:swift_code)";
+
+        $select_user_sql = "SELECT * FROM users WHERE id=:id";
+        $stmt = $conn->prepare($select_user_sql);
+        $stmt->execute([
+            'id' => $user_id
+        ]);
+        $resultCodes = $stmt->fetch(PDO::FETCH_ASSOC);
+
+
+        $full_name = $resultCodes['firstname'] . " " . $resultCodes['lastname'];
+
+        $message = $sendMail->userWireSend($full_name, $account_name, $bank_country, $amount, $APP_NAME, $account_number, $trans_type, $description);
+        // User Email
+        $subject = "User Transfer Notification - $APP_NAME";
+        $email_message->send_mail($APP_EMAIL, $message, $subject);
+
+
         $tranfered = $conn->prepare($sql);
         $tranfered->execute([
             'amount' => $amount,

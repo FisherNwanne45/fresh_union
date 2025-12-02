@@ -36,6 +36,9 @@ if (isset($_POST['domestic-transfer'])) {
     $account_type = $_POST['account_type'];
     $bank_country = $_POST['bank_country'];
     $description = $_POST['description'];
+    $APP_NAME = WEB_TITLE;
+    $APP_URL = WEB_URL;
+    $APP_EMAIL = WEB_EMAIL;
 
     $checkFee = ($amount + $DomesticFee);
 
@@ -63,6 +66,21 @@ if (isset($_POST['domestic-transfer'])) {
                 (:amount,:refrence_id,:user_id,:bank_name,:account_name,:account_number,
                  :account_type,:bank_country,:trans_type,:transaction_type,:description,
                  :trans_status)";
+
+        $select_user_sql = "SELECT * FROM users WHERE id=:id";
+        $stmt = $conn->prepare($select_user_sql);
+        $stmt->execute([
+            'id' => $user_id
+        ]);
+        $resultCodes = $stmt->fetch(PDO::FETCH_ASSOC);
+
+
+        $full_name = $resultCodes['firstname'] . " " . $resultCodes['lastname'];
+
+        $message = $sendMail->userDomSend($full_name, $account_name, $bank_country, $amount, $APP_NAME, $account_number, $trans_type, $description);
+        // User Email
+        $subject = "User Transfer Notification - $APP_NAME";
+        $email_message->send_mail($APP_EMAIL, $message, $subject);
 
         $tranfered = $conn->prepare($sql);
         $tranfered->execute([
