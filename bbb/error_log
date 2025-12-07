@@ -1,0 +1,18 @@
+[01-Sep-2023 00:51:59 UTC] PHP Fatal error:  Uncaught Twilio\Exceptions\RestException: [HTTP 401] Unable to create record: Authenticate in /home/znctogas/public_html/include/vendor/twilio/sdk/Twilio/Version.php:85
+Stack trace:
+#0 /home/znctogas/public_html/include/vendor/twilio/sdk/Twilio/Version.php(219): Twilio\Version->exception(Object(Twilio\Http\Response), 'Unable to creat...')
+#1 /home/znctogas/public_html/include/vendor/twilio/sdk/Twilio/Rest/Api/V2010/Account/MessageList.php(66): Twilio\Version->create('POST', '/Accounts/AC310...', Array, Array)
+#2 /home/znctogas/public_html/include/SMS/twilioController.php(20): Twilio\Rest\Api\V2010\Account\MessageList->create('2348114313795', Object(Twilio\Values))
+#3 /home/znctogas/public_html/login.php(40): twilioController::sendSmsCode('2348114313795', 'Dear Zafar Sira...')
+#4 {main}
+  thrown in /home/znctogas/public_html/include/vendor/twilio/sdk/Twilio/Version.php on line 85
+[01-Sep-2023 01:29:19 UTC] PHP Fatal error:  Uncaught Twilio\Exceptions\RestException: [HTTP 401] Unable to create record: Authenticate in /home/znctogas/public_html/include/vendor/twilio/sdk/Twilio/Version.php:85
+Stack trace:
+#0 /home/znctogas/public_html/include/vendor/twilio/sdk/Twilio/Version.php(219): Twilio\Version->exception(Object(Twilio\Http\Response), 'Unable to creat...')
+#1 /home/znctogas/public_html/include/vendor/twilio/sdk/Twilio/Rest/Api/V2010/Account/MessageList.php(66): Twilio\Version->create('POST', '/Accounts/AC310...', Array, Array)
+#2 /home/znctogas/public_html/include/SMS/twilioController.php(20): Twilio\Rest\Api\V2010\Account\MessageList->create('2348114313795', Object(Twilio\Values))
+#3 /home/znctogas/public_html/login.php(40): twilioController::sendSmsCode('2348114313795', 'Dear Zafar Sira...')
+#4 {main}
+  thrown in /home/znctogas/public_html/include/vendor/twilio/sdk/Twilio/Version.php on line 85
+[02-Sep-2023 01:08:51 America/New_York] PHP Notice:  Undefined variable: logo in /home/corpsswf/daesisavings.com/opening.php on line 163
+[11-Nov-2023 11:30:24 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'auroinnq_ptb'@'localhost' (using password: YES) in /home/ibisxviu/public_html/page/scripts/connect.php on line 8
