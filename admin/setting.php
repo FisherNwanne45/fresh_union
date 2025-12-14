@@ -91,8 +91,11 @@ if (isset($_POST['save_settings'])) {
     $currency = $_POST['currency'];
     $routine = $_POST['routine'];
     $swift = $_POST['swift'];
+    $tawk = $_POST['tawk'];
+    $sitekey = $_POST['sitekey'];
+    $secretkey = $_POST['secretkey'];
     $id = "1";
-    $sql = "UPDATE settings SET url_name=:url_name,url_link=:url_link,url_tel=:url_tel,url_email=:url_email,cardfee=:cardfee,code1=:code1,code2=:code2,code3=:code3,url_address=:url_address,country=:country,domesticfee=:domesticfee,wirefee=:wirefee, loanlimit=:loanlimit, domesticlimit=:domesticlimit,wirelimit=:wirelimit,billing_code=:billing_code,cot_code=:cot_code,tax_code=:tax_code,imf_code=:imf_code,twillio_status=:twillio_status,currency=:currency,routine=:routine,swift=:swift WHERE id=:id";
+    $sql = "UPDATE settings SET url_name=:url_name,url_link=:url_link,url_tel=:url_tel,url_email=:url_email,cardfee=:cardfee,code1=:code1,code2=:code2,code3=:code3,url_address=:url_address,country=:country,domesticfee=:domesticfee,wirefee=:wirefee, loanlimit=:loanlimit, domesticlimit=:domesticlimit,wirelimit=:wirelimit,billing_code=:billing_code,cot_code=:cot_code,tax_code=:tax_code,imf_code=:imf_code,twillio_status=:twillio_status,currency=:currency,routine=:routine,swift=:swift,tawk=:tawk,sitekey=:sitekey,secretkey=:secretkey WHERE id=:id";
     $stmt = $conn->prepare($sql);
     $stmt->execute([
         'url_name' => $url_name,
@@ -118,6 +121,9 @@ if (isset($_POST['save_settings'])) {
         'currency' => $currency,
         'routine' => $routine,
         'swift' => $swift,
+        'tawk' => $tawk,
+        'sitekey' => $sitekey,
+        'secretkey' => $secretkey,
         'id' => $id
     ]);
 
@@ -215,18 +221,32 @@ if (isset($_POST['save_settings'])) {
                             </div>
                             <!-- /.form-group -->
 
+                            <div class="form-group">
+                                <label>System Address</label>
+                                <input type="text" class="form-control" name="url_address"
+                                    value="<?= $page['url_address'] ?>" placeholder="<?= $page['url_address'] ?>">
+                            </div>
+
                             <div class="row">
 
-                                <div class="col-md-6 col-sm-12">
+                                <div class="col-md-5 col-sm-12">
                                     <div class="form-group">
                                         <label>System Phone</label>
                                         <input type="text" class="form-control" name="url_tel"
                                             value="<?= $page['url_tel'] ?>" placeholder="<?= $page['url_tel'] ?>">
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-sm-12">
+                                <div class="col-md-4 col-sm-12">
                                     <div class="form-group">
-                                        <label>System Currency</label>
+                                        <label>Country</label>
+                                        <input type="text" class="form-control" name="country"
+                                            value="<?= $page['country'] ?>" placeholder="country">
+                                    </div>
+
+                                </div>
+                                <div class="col-md-3 col-sm-12">
+                                    <div class="form-group">
+                                        <label> Currency</label>
                                         <input type="text" class="form-control" name="currency"
                                             value="<?= $page['currency'] ?>" placeholder="System Currency">
                                     </div>
@@ -235,17 +255,6 @@ if (isset($_POST['save_settings'])) {
 
                             </div>
 
-
-                            <div class="form-group">
-                                <label>System Address</label>
-                                <input type="text" class="form-control" name="url_address"
-                                    value="<?= $page['url_address'] ?>" placeholder="<?= $page['url_address'] ?>">
-                            </div>
-                            <div class="form-group">
-                                <label>Country</label>
-                                <input type="text" class="form-control" name="country" value="<?= $page['country'] ?>"
-                                    placeholder="country">
-                            </div>
 
 
 
@@ -258,7 +267,25 @@ if (isset($_POST['save_settings'])) {
 
 
 
+                            <div class="row">
 
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label>Recaptcha Sitekey</label>
+                                        <input type="text" class="form-control" name="sitekey"
+                                            value="<?= $page['sitekey'] ?>" placeholder="Google Recaptcha Site Key">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label>Recaptcha Secretkey</label>
+                                        <input type="text" class="form-control" name="secretkey"
+                                            value="<?= $page['secretkey'] ?>" placeholder="Google Recaptcha Secret Key">
+                                    </div>
+                                </div>
+
+
+                            </div>
 
 
                             <!-- /.form-group -->
@@ -452,10 +479,10 @@ if (isset($_POST['save_settings'])) {
                                 </div>
                             </div>
                             <style>
-                            .toggle-off.btn {
-                                background-color: darkred;
-                                color: white;
-                            }
+                                .toggle-off.btn {
+                                    background-color: darkred;
+                                    color: white;
+                                }
                             </style>
 
                             <!-- <div class="form-group">
@@ -531,21 +558,21 @@ if (isset($_POST['save_settings'])) {
 
         </div>
         <script>
-        document.getElementById("logoInput").addEventListener("change", function() {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                document.getElementById("logoPreview").src = e.target.result;
-            }
-            reader.readAsDataURL(this.files[0]);
-        });
+            document.getElementById("logoInput").addEventListener("change", function() {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById("logoPreview").src = e.target.result;
+                }
+                reader.readAsDataURL(this.files[0]);
+            });
 
-        document.getElementById("faviconInput").addEventListener("change", function() {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                document.getElementById("faviconPreview").src = e.target.result;
-            }
-            reader.readAsDataURL(this.files[0]);
-        });
+            document.getElementById("faviconInput").addEventListener("change", function() {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById("faviconPreview").src = e.target.result;
+                }
+                reader.readAsDataURL(this.files[0]);
+            });
         </script>
 
 

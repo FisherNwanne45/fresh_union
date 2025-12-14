@@ -9,7 +9,7 @@ if (@$_SESSION['acct_no']) {
 }
 
 if (isset($_POST['regSubmit'])) {
-    $recaptchaSecret = '6LcarW0rAAAAAMUVTPhbea1qJXBCyuTj1oiq6G_R'; // Replace with your secret key
+    $recaptchaSecret = $page['secretkey']; // Replace with your secret key
     $recaptchaResponse = $_POST['g-recaptcha-response'];
     $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptchaSecret&response=$recaptchaResponse");
     $responseData = json_decode($response);
@@ -118,18 +118,18 @@ if (isset($_POST['regSubmit'])) {
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> <?= $pageName  ?> - <?= $pageTitle ?> </title>
-        <meta name="description" content="<?= $pageTitle ?> Mobile Banking">
-        <link rel="shortcut icon" href="<?= $web_url ?>/admin/assets/images/logo/<?= $page['favicon'] ?>"
-            type="image/x-icon" />
-        <!-- Bootstrap 5 CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <?= $pageName  ?> - <?= $pageTitle ?> </title>
+    <meta name="description" content="<?= $pageTitle ?> Mobile Banking">
+    <link rel="shortcut icon" href="<?= $web_url ?>/admin/assets/images/logo/<?= $page['favicon'] ?>"
+        type="image/x-icon" />
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
         :root {
             --primary-color: #1F1B44;
             --secondary-color: #4A44A6;
@@ -331,272 +331,285 @@ if (isset($_POST['regSubmit'])) {
                 padding: 30px;
             }
         }
-        </style>
-    </head>
+    </style>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="translate.google.com/translate_a/fa0d8a0d8.txt?cb=googleTranslateElementInit"></script>
+</head>
 
-    <body>
-        <div class="container">
-            <div class="register-container">
-                <div class="row g-0">
-                    <!-- Left Side - Branding & Features -->
-                    <div class="col-lg-5 register-left">
-                        <div class="text-center mb-4">
-                            <img src="<?= $web_url ?>/admin/assets/images/logo/<?= $page['image'] ?>" alt="Wallet Logo"
-                                class="brand-logo">
-                        </div>
-                        <h2 class="mb-3">Join Our Secure Wallet</h2>
-                        <p class="mb-4">Open your account in minutes and enjoy our premium banking features with
-                            top-tier security.</p>
+<body>
+    <div class="container">
+        <div class="register-container">
+            <div class="row g-0">
+                <!-- Left Side - Branding & Features -->
+                <div class="col-lg-5 register-left">
+                    <div class="text-center mb-4">
+                        <a href="<?= $web_url ?>"> <img
+                                src="<?= $web_url ?>/admin/assets/images/logo/<?= $page['image'] ?>"
+                                alt="Wallet Logo" class="brand-logo"></a>
+                        <?php echo $translate ?>
+                    </div>
+                    <h2 class="mb-3">Join Our Secure Wallet</h2>
+                    <p class="mb-4">Open your account in minutes and enjoy our premium banking features with
+                        top-tier security.</p>
 
-                        <ul class="feature-list">
-                            <li><i class="fas fa-shield-alt"></i> Advanced security & encryption</li>
-                            <li><i class="fas fa-piggy-bank"></i> Multiple account types</li>
-                            <li><i class="fas fa-bolt"></i> Instant account setup</li>
-                            <li><i class="fas fa-mobile-alt"></i> Mobile banking access</li>
-                            <li><i class="fas fa-headset"></i> 24/7 customer support</li>
-                        </ul>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-shield-alt"></i> Advanced security & encryption</li>
+                        <li><i class="fas fa-piggy-bank"></i> Multiple account types</li>
+                        <li><i class="fas fa-bolt"></i> Instant account setup</li>
+                        <li><i class="fas fa-mobile-alt"></i> Mobile banking access</li>
+                        <li><i class="fas fa-headset"></i> 24/7 customer support</li>
+                    </ul>
 
-                        <div class="security-badge">
-                            <i class="fas fa-lock"></i> Your information is securely encrypted
-                        </div>
+                    <div class="security-badge">
+                        <i class="fas fa-lock"></i> Your information is securely encrypted
+                    </div>
+                </div>
+
+                <!-- Right Side - Registration Form -->
+                <div class="col-lg-7 register-right">
+                    <h3 class="mb-4">Open Your Account</h3>
+                    <p class="text-muted mb-4">Fill in your details to create your wallet account</p>
+
+                    <!-- Progress Bar -->
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 33%;" aria-valuenow="33"
+                            aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
 
-                    <!-- Right Side - Registration Form -->
-                    <div class="col-lg-7 register-right">
-                        <h3 class="mb-4">Open Your Account</h3>
-                        <p class="text-muted mb-4">Fill in your details to create your wallet account</p>
+                    <?php if (isset($msg1)) echo $msg1; ?>
 
-                        <!-- Progress Bar -->
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 33%;" aria-valuenow="33"
-                                aria-valuemin="0" aria-valuemax="100"></div>
+                    <form method="post" class="signin_validate" enctype="multipart/form-data" id="registrationForm">
+                        <!-- Personal Information Section -->
+                        <div class="form-section active" id="section1">
+                            <h5 class="section-title">Personal Information</h5>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstname" class="form-label">First Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                        <input type="text" class="form-control" id="firstname" name="firstname"
+                                            placeholder="Enter your first name" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastname" class="form-label">Last Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                        <input type="text" class="form-control" id="lastname" name="lastname"
+                                            placeholder="Enter your last name" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="acct_email" class="form-label">Email Address</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                        <input type="email" class="form-control" id="acct_email" name="acct_email"
+                                            placeholder="hello@example.com" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="phoneNumber" class="form-label">Phone Number</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                                        <input type="text" inputmode="numeric" required pattern="[0-9]+"
+                                            minlength="9" maxlength="12" autocomplete="off"
+                                            placeholder="14409414254" class="form-control" name="phoneNumber">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="acct_dob" class="form-label">Date of Birth</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                                        <input type="date" class="form-control" id="acct_dob" name="acct_dob"
+                                            required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="acct_gender" class="form-label">Gender</label>
+                                    <select name="acct_gender" required class="form-control" data-width='100%'>
+                                        <option value="">Select Gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="nav-buttons">
+                                <div></div> <!-- Empty div for spacing -->
+                                <button type="button" class="btn btn-register next-section" data-next="2">Next <i
+                                        class="fas fa-arrow-right ms-2"></i></button>
+                            </div>
                         </div>
 
-                        <?php if (isset($msg1)) echo $msg1; ?>
+                        <!-- Address Information Section -->
+                        <div class="form-section" id="section2">
+                            <h5 class="section-title">Address Information</h5>
 
-                        <form method="post" class="signin_validate" enctype="multipart/form-data" id="registrationForm">
-                            <!-- Personal Information Section -->
-                            <div class="form-section active" id="section1">
-                                <h5 class="section-title">Personal Information</h5>
-
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="firstname" class="form-label">First Name</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                            <input type="text" class="form-control" id="firstname" name="firstname"
-                                                placeholder="Enter your first name" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6 mb-3">
-                                        <label for="lastname" class="form-label">Last Name</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                            <input type="text" class="form-control" id="lastname" name="lastname"
-                                                placeholder="Enter your last name" required>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="acct_email" class="form-label">Email Address</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                            <input type="email" class="form-control" id="acct_email" name="acct_email"
-                                                placeholder="hello@example.com" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6 mb-3">
-                                        <label for="phoneNumber" class="form-label">Phone Number</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                                            <input type="text" inputmode="numeric" required pattern="[0-9]+"
-                                                minlength="9" maxlength="12" autocomplete="off"
-                                                placeholder="14409414254" class="form-control" name="phoneNumber">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="acct_dob" class="form-label">Date of Birth</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
-                                            <input type="date" class="form-control" id="acct_dob" name="acct_dob"
-                                                required>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6 mb-3">
-                                        <label for="acct_gender" class="form-label">Gender</label>
-                                        <select name="acct_gender" required class="form-control" data-width='100%'>
-                                            <option value="">Select Gender</option>
-                                            <option value="Male">Male</option>
-                                            <option value="Female">Female</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="nav-buttons">
-                                    <div></div> <!-- Empty div for spacing -->
-                                    <button type="button" class="btn btn-register next-section" data-next="2">Next <i
-                                            class="fas fa-arrow-right ms-2"></i></button>
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Home Address</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-home"></i></span>
+                                    <input type="text" class="form-control" id="address" name="address"
+                                        placeholder="Enter your home address" required>
                                 </div>
                             </div>
 
-                            <!-- Address Information Section -->
-                            <div class="form-section" id="section2">
-                                <h5 class="section-title">Address Information</h5>
-
-                                <div class="mb-3">
-                                    <label for="address" class="form-label">Home Address</label>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="state" class="form-label">State</label>
                                     <div class="input-group">
-                                        <span class="input-group-text"><i class="fas fa-home"></i></span>
-                                        <input type="text" class="form-control" id="address" name="address"
-                                            placeholder="Enter your home address" required>
+                                        <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                                        <input type="text" class="form-control" id="state" name="state"
+                                            placeholder="Enter your state" required>
                                     </div>
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="state" class="form-label">State</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
-                                            <input type="text" class="form-control" id="state" name="state"
-                                                placeholder="Enter your state" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6 mb-3">
-                                        <label for="city" class="form-label">City</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text"><i class="fas fa-city"></i></span>
-                                            <input type="text" class="form-control" id="city" name="city"
-                                                placeholder="Enter your city">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="zipcode" class="form-label">Zipcode/Postal Code</label>
+                                <div class="col-md-6 mb-3">
+                                    <label for="city" class="form-label">City</label>
                                     <div class="input-group">
-                                        <span class="input-group-text"><i class="fas fa-mail-bulk"></i></span>
-                                        <input type="text" inputmode="numeric" required pattern="[0-9]+" minlength="4"
-                                            maxlength="6" autocomplete="off" class="form-control" id="zipcode"
-                                            name="zipcode" placeholder="100001">
+                                        <span class="input-group-text"><i class="fas fa-city"></i></span>
+                                        <input type="text" class="form-control" id="city" name="city"
+                                            placeholder="Enter your city">
                                     </div>
-                                </div>
-
-                                <div class="nav-buttons">
-                                    <button type="button" class="btn btn-outline-secondary prev-section"
-                                        data-prev="1"><i class="fas fa-arrow-left me-2"></i> Back</button>
-                                    <button type="button" class="btn btn-register next-section" data-next="3">Next <i
-                                            class="fas fa-arrow-right ms-2"></i></button>
                                 </div>
                             </div>
 
-                            <!-- Account Information Section -->
-                            <div class="form-section" id="section3">
-                                <h5 class="section-title">Account Information</h5>
+                            <div class="mb-3">
+                                <label for="zipcode" class="form-label">Zipcode/Postal Code</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-mail-bulk"></i></span>
+                                    <input type="text" inputmode="numeric" required pattern="[0-9]+" minlength="4"
+                                        maxlength="6" autocomplete="off" class="form-control" id="zipcode"
+                                        name="zipcode" placeholder="100001">
+                                </div>
+                            </div>
 
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="acct_type" class="form-label">Account Type</label>
-                                        <select name="acct_type" required class="form-control" data-width='100%'>
-                                            <option value="">Select Account Type</option>
-                                            <option value="Savings">Savings Account</option>
-                                            <option value="Current">Current Account</option>
-                                            <option value="Checking">Checking Account</option>
-                                            <option value="Fixed Deposit">Fixed Deposit</option>
-                                            <option value="Non Resident">Non Resident Account</option>
-                                            <option value="Joint Account">Joint Account</option>
-                                        </select>
-                                    </div>
+                            <div class="nav-buttons">
+                                <button type="button" class="btn btn-outline-secondary prev-section"
+                                    data-prev="1"><i class="fas fa-arrow-left me-2"></i> Back</button>
+                                <button type="button" class="btn btn-register next-section" data-next="3">Next <i
+                                        class="fas fa-arrow-right ms-2"></i></button>
+                            </div>
+                        </div>
 
-                                    <div class="col-md-6 mb-3">
-                                        <label for="acct_pin" class="form-label">4 Digit PIN</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text"><i class="fas fa-key"></i></span>
-                                            <input type="text" class="form-control" inputmode="numeric" required
-                                                pattern="[0-9]+" maxlength="4" autocomplete="off" placeholder="****"
-                                                name="acct_pin">
-                                        </div>
-                                    </div>
+                        <!-- Account Information Section -->
+                        <div class="form-section" id="section3">
+                            <h5 class="section-title">Account Information</h5>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="acct_type" class="form-label">Account Type</label>
+                                    <select name="acct_type" required class="form-control" data-width='100%'>
+                                        <option value="">Select Account Type</option>
+                                        <option value="Savings">Savings Account</option>
+                                        <option value="Current">Current Account</option>
+                                        <option value="Checking">Checking Account</option>
+                                        <option value="Fixed Deposit">Fixed Deposit</option>
+                                        <option value="Non Resident">Non Resident Account</option>
+                                        <option value="Joint Account">Joint Account</option>
+                                    </select>
                                 </div>
 
-                                <div class="mb-3">
-                                    <label class="form-label">Upload Profile Picture</label>
-                                    <div class="file-upload">
-                                        <button type="button" class="file-upload-btn">
-                                            <i class="fas fa-cloud-upload-alt me-2"></i>Choose File (Max: 2MB)
+                                <div class="col-md-6 mb-3">
+                                    <label for="acct_pin" class="form-label">4 Digit PIN</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                        <input type="text" class="form-control" inputmode="numeric" required
+                                            pattern="[0-9]+" maxlength="4" autocomplete="off" placeholder="****"
+                                            name="acct_pin">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Upload Profile Picture</label>
+                                <div class="file-upload">
+                                    <button type="button" class="file-upload-btn">
+                                        <i class="fas fa-cloud-upload-alt me-2"></i>Choose File (Max: 2MB)
+                                    </button>
+                                    <input type="file" id="input-file-max-fs" required class="file-upload-input"
+                                        name="image" data-max-file-size="2M" />
+                                    <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
+                                </div>
+                                <div class="form-text">Accepted formats: JPG, PNG, JPEG</div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="acct_password" class="form-label">Password</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                        <input type="password" class="form-control" id="acct_password"
+                                            maxlength="20" required placeholder="Password" name="acct_password">
+                                        <button class="btn btn-outline-secondary toggle-password" type="button">
+                                            <i class="fas fa-eye"></i>
                                         </button>
-                                        <input type="file" id="input-file-max-fs" required class="file-upload-input"
-                                            name="image" data-max-file-size="2M" />
-                                        <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
-                                    </div>
-                                    <div class="form-text">Accepted formats: JPG, PNG, JPEG</div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="acct_password" class="form-label">Password</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                                            <input type="password" class="form-control" id="acct_password"
-                                                maxlength="20" required placeholder="Password" name="acct_password">
-                                            <button class="btn btn-outline-secondary toggle-password" type="button">
-                                                <i class="fas fa-eye"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6 mb-3">
-                                        <label for="confirmPassword" class="form-label">Confirm Password</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                                            <input type="password" class="form-control" id="confirmPassword"
-                                                maxlength="20" required placeholder="Confirm Password"
-                                                name="confirmPassword">
-                                            <button class="btn btn-outline-secondary toggle-password" type="button">
-                                                <i class="fas fa-eye"></i>
-                                            </button>
-                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="mb-3">
-                                    <div class="g-recaptcha" data-sitekey="6LcarW0rAAAAAPlaPVUPASNXy-EbM6Aico29B4b2">
+                                <div class="col-md-6 mb-3">
+                                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                        <input type="password" class="form-control" id="confirmPassword"
+                                            maxlength="20" required placeholder="Confirm Password"
+                                            name="confirmPassword">
+                                        <button class="btn btn-outline-secondary toggle-password" type="button">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
                                     </div>
-                                </div>
-
-                                <div class="nav-buttons">
-                                    <button type="button" class="btn btn-outline-secondary prev-section"
-                                        data-prev="2"><i class="fas fa-arrow-left me-2"></i> Back</button>
-                                    <button type="submit" class="btn btn-register" name="regSubmit">Create
-                                        Account</button>
                                 </div>
                             </div>
-                        </form>
 
-                        <div class="text-center mt-4">
-                            <p class="mb-0">Already have an account?
-                                <a href="./login.php" class="login-link">Sign in here</a>
-                            </p>
+                            <div class="mb-3">
+                                <div class="g-recaptcha"
+                                    data-sitekey="<?= htmlspecialchars($page['sitekey'], ENT_QUOTES, 'UTF-8'); ?>">
+                                </div>
+                            </div>
+
+                            <div class="nav-buttons">
+                                <button type="button" class="btn btn-outline-secondary prev-section"
+                                    data-prev="2"><i class="fas fa-arrow-left me-2"></i> Back</button>
+                                <button type="submit" class="btn btn-register" name="regSubmit">Create
+                                    Account</button>
+                            </div>
                         </div>
+                    </form>
+
+                    <div class="text-center mt-4">
+                        <p class="mb-0">Already have an account?
+                            <a href="./login.php" class="login-link">Sign in here</a>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Bootstrap JS Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- reCAPTCHA -->
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-        <script>
+    <script>
         // Multi-step form navigation
         document.querySelectorAll('.next-section').forEach(button => {
             button.addEventListener('click', function() {
@@ -695,7 +708,7 @@ if (isset($_POST['regSubmit'])) {
                 alert('Please fill in all required fields correctly.');
             }
         });
-        </script>
-    </body>
+    </script>
+</body>
 
 </html>

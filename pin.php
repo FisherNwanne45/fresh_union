@@ -5,16 +5,16 @@ include(ROOT_PATH . "/auth/header.php");
 
 
 if (@!$_SESSION['login']) {
-  header("Location:./login.php");
+    header("Location:./login.php");
 }
 if (@$_SESSION['acct_no']) {
-  header("Location:./users/dashboard.php");
+    header("Location:./users/dashboard.php");
 }
 $viesConn = "SELECT * FROM users WHERE acct_no = :acct_no";
 $stmt = $conn->prepare($viesConn);
 
 $stmt->execute([
-  ':acct_no' => $_SESSION['login']
+    ':acct_no' => $_SESSION['login']
 ]);
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -24,54 +24,54 @@ $acct_no = $row['acct_no'];
 
 
 if (isset($_POST['pincode_submit'])) {
-  $pincodeVerified = $_POST['input'];
-  $old_otp = $row['acct_pin'];
+    $pincodeVerified = $_POST['input'];
+    $old_otp = $row['acct_pin'];
 
-  // Use a flag to track validation status
-  $login_success = false;
-  $error_message = '';
+    // Use a flag to track validation status
+    $login_success = false;
+    $error_message = '';
 
-  if (empty($pincodeVerified)) {
-    $error_message = 'Enter Your Pincode';
-  } else if ($pincodeVerified !== $old_otp) {
-    $error_message = 'Invalid Pincode';
-  } else {
-    // Successful Login
-    $login_success = true;
-  }
+    if (empty($pincodeVerified)) {
+        $error_message = 'Enter Your Pincode';
+    } else if ($pincodeVerified !== $old_otp) {
+        $error_message = 'Invalid Pincode';
+    } else {
+        // Successful Login
+        $login_success = true;
+    }
 
-  if ($login_success) {
-    // Regenerate session ID for security (recommended best practice)
-    session_regenerate_id(true);
+    if ($login_success) {
+        // Regenerate session ID for security (recommended best practice)
+        session_regenerate_id(true);
 
-    $_SESSION['acct_no'] = $acct_no;
-    // $_COOKIE['firstVisit'] = $acct_no; // Note: Setting cookies is better done with setcookie() before any output
-    header("Location:./user/dashboard.php");
-    exit;
-  } else {
-    // Set session variables for Bootstrap Alert display
-    $_SESSION['alert_type'] = 'danger'; // Use 'danger' for error color in Bootstrap
-    $_SESSION['alert_message'] = $error_message;
-  }
+        $_SESSION['acct_no'] = $acct_no;
+        // $_COOKIE['firstVisit'] = $acct_no; // Note: Setting cookies is better done with setcookie() before any output
+        header("Location:./user/dashboard.php");
+        exit;
+    } else {
+        // Set session variables for Bootstrap Alert display
+        $_SESSION['alert_type'] = 'danger'; // Use 'danger' for error color in Bootstrap
+        $_SESSION['alert_message'] = $error_message;
+    }
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title> PIN Verification - <?= $pageName  ?> - <?= $pageTitle ?> </title>
-        <meta name="description" content="<?= $pageTitle ?> Mobile Banking">
-        <link rel="shortcut icon" href="<?= $web_url ?>/admin/assets/images/logo/<?= $page['favicon'] ?>"
-            type="image/x-icon" />
-        <!-- Bootstrap 5 CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <style>
+    <title> PIN Verification - <?= $pageName  ?> - <?= $pageTitle ?> </title>
+    <meta name="description" content="<?= $pageTitle ?> Mobile Banking">
+    <link rel="shortcut icon" href="<?= $web_url ?>/admin/assets/images/logo/<?= $page['favicon'] ?>"
+        type="image/x-icon" />
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
         :root {
             --primary-color: #1F1B44;
             --secondary-color: #4A44A6;
@@ -89,6 +89,12 @@ if (isset($_POST['pincode_submit'])) {
             display: flex;
             align-items: center;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .translate {
+            text-align: center;
+            align-items: center;
+            justify-content: center;
         }
 
         .pin-container {
@@ -282,160 +288,176 @@ if (isset($_POST['pincode_submit'])) {
                 font-size: 1.1rem;
             }
         }
-        </style>
-    </head>
+    </style>
 
-    <body>
-        <div class="container">
-            <div class="pin-container">
-                <!-- Header with user info -->
-                <div class="pin-header">
-                    <div class="user-avatar">
-                        <?php
-          // PHP LOGIC FOR IMAGE DISPLAY
-          $user_image = $row['acct_image'];
-          $image_folder = $web_url . "/assets/user/profile/";
-          $default_image = "default.png";
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="translate.google.com/translate_a/fa0d8a0d8.txt?cb=googleTranslateElementInit"></script>
+</head>
 
-          if (!empty($user_image) && file_exists(ROOT_PATH . "/assets/user/profile/" . $user_image)) {
-            $image_to_display = $image_folder . $user_image;
-          } else {
-            $image_to_display = $image_folder . $default_image;
-          }
-          ?>
+<body>
+    <div class="container">
+        <div class="pin-container">
+            <!-- Header with user info -->
+            <div class="pin-header">
+                <div class="user-avatar">
+                    <?php
+                    // PHP LOGIC FOR IMAGE DISPLAY
+                    $user_image = $row['acct_image'];
+                    $image_folder = $web_url . "/assets/user/profile/";
+                    $default_image = "default.png";
 
-                        <img src="<?= $image_to_display ?>" width="40" alt="Profile Image" />
+                    if (!empty($user_image) && file_exists(ROOT_PATH . "/assets/user/profile/" . $user_image)) {
+                        $image_to_display = $image_folder . $user_image;
+                    } else {
+                        $image_to_display = $image_folder . $default_image;
+                    }
+                    ?>
 
-                    </div>
-                    <h4 class="user-name"><?= $row['lastname']; ?> <?= $row['firstname']; ?></h4>
-                    <div class="user-account">Account: <?= $acct_no ?></div>
+                    <img src="<?= $image_to_display ?>" width="40" alt="Profile Image" />
+
                 </div>
-                <?php
-      if (isset($_SESSION['alert_message']) && isset($_SESSION['alert_type'])) {
-        // Ensure the type is a valid Bootstrap class (e.g., 'danger')
-        $alert_class = htmlspecialchars($_SESSION['alert_type']);
-        $alert_text = htmlspecialchars($_SESSION['alert_message']);
+                <h4 class="user-name"><?= $row['lastname']; ?> <?= $row['firstname']; ?></h4>
+                <div class="user-account">Account: <?= $acct_no ?></div>
+            </div>
+            <?php
+            if (isset($_SESSION['alert_message']) && isset($_SESSION['alert_type'])) {
+                // Ensure the type is a valid Bootstrap class (e.g., 'danger')
+                $alert_class = htmlspecialchars($_SESSION['alert_type']);
+                $alert_text = htmlspecialchars($_SESSION['alert_message']);
 
-        echo '<div class="alert alert-' . $alert_class . ' alert-dismissible fade show mt-4 mb-4" role="alert">';
-        echo '<strong>Error:</strong> ' . $alert_text;
-        echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
-        echo '</div>';
+                echo '<div class="alert alert-' . $alert_class . ' alert-dismissible fade show mt-4 mb-4" role="alert">';
+                echo '<strong>Error:</strong> ' . $alert_text;
+                echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+                echo '</div>';
 
-        // Clear the session variables after display
-        unset($_SESSION['alert_message']);
-        unset($_SESSION['alert_type']);
-      }
-      ?>
-                <!-- PIN Verification Body -->
-                <div class="pin-body">
+                // Clear the session variables after display
+                unset($_SESSION['alert_message']);
+                unset($_SESSION['alert_type']);
+            }
+            ?>
+            <!-- PIN Verification Body -->
+            <div class="pin-body">
 
 
-                    <h3 class="text-center text-primary mb-3">Enter Your PIN Code</h3>
-                    <p class="text-center pin-instruction">Enter your 4-digit security PIN to access your account</p>
+                <h3 class="text-center text-primary mb-3">Enter Your PIN Code</h3>
+                <p class="text-center pin-instruction">Enter your 4-digit security PIN to access your account</p>
 
-                    <!-- PIN Input Squares -->
-                    <div class="pin-input-container">
-                        <div class="d-flex justify-content-center gap-3">
-                            <div class="pin-square">
-                                <input type="text" maxlength="1" class="pin-input" data-index="0" readonly>
-                            </div>
-                            <div class="pin-square">
-                                <input type="text" maxlength="1" class="pin-input" data-index="1" readonly>
-                            </div>
-                            <div class="pin-square">
-                                <input type="text" maxlength="1" class="pin-input" data-index="2" readonly>
-                            </div>
-                            <div class="pin-square">
-                                <input type="text" maxlength="1" class="pin-input" data-index="3" readonly>
-                            </div>
+                <!-- PIN Input Squares -->
+                <div class="pin-input-container">
+                    <div class="d-flex justify-content-center gap-3">
+                        <div class="pin-square">
+                            <input type="text" maxlength="1" class="pin-input" data-index="0" readonly>
+                        </div>
+                        <div class="pin-square">
+                            <input type="text" maxlength="1" class="pin-input" data-index="1" readonly>
+                        </div>
+                        <div class="pin-square">
+                            <input type="text" maxlength="1" class="pin-input" data-index="2" readonly>
+                        </div>
+                        <div class="pin-square">
+                            <input type="text" maxlength="1" class="pin-input" data-index="3" readonly>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Virtual Keypad -->
-                    <div class="virtual-keypad">
-                        <div class="row g-2 mb-3">
-                            <div class="col-4">
-                                <button type="button" class="btn btn-keypad w-100 py-3" data-number="1">1</button>
-                            </div>
-                            <div class="col-4">
-                                <button type="button" class="btn btn-keypad w-100 py-3" data-number="2">2</button>
-                            </div>
-                            <div class="col-4">
-                                <button type="button" class="btn btn-keypad w-100 py-3" data-number="3">3</button>
-                            </div>
+                <!-- Virtual Keypad -->
+                <div class="virtual-keypad">
+                    <div class="row g-2 mb-3">
+                        <div class="col-4">
+                            <button type="button" class="btn btn-keypad w-100 py-3" data-number="1">1</button>
                         </div>
-                        <div class="row g-2 mb-3">
-                            <div class="col-4">
-                                <button type="button" class="btn btn-keypad w-100 py-3" data-number="4">4</button>
-                            </div>
-                            <div class="col-4">
-                                <button type="button" class="btn btn-keypad w-100 py-3" data-number="5">5</button>
-                            </div>
-                            <div class="col-4">
-                                <button type="button" class="btn btn-keypad w-100 py-3" data-number="6">6</button>
-                            </div>
+                        <div class="col-4">
+                            <button type="button" class="btn btn-keypad w-100 py-3" data-number="2">2</button>
                         </div>
-                        <div class="row g-2 mb-3">
-                            <div class="col-4">
-                                <button type="button" class="btn btn-keypad w-100 py-3" data-number="7">7</button>
-                            </div>
-                            <div class="col-4">
-                                <button type="button" class="btn btn-keypad w-100 py-3" data-number="8">8</button>
-                            </div>
-                            <div class="col-4">
-                                <button type="button" class="btn btn-keypad w-100 py-3" data-number="9">9</button>
-                            </div>
-                        </div>
-                        <div class="row g-2">
-                            <div class="col-4">
-                                <button type="button" class="btn btn-keypad btn-clear w-100 py-3">
-                                    <i class="fas fa-undo"></i>
-                                </button>
-                            </div>
-                            <div class="col-4">
-                                <button type="button" class="btn btn-keypad w-100 py-3" data-number="0">0</button>
-                            </div>
-                            <div class="col-4">
-                                <button type="button" class="btn btn-keypad btn-backspace w-100 py-3">
-                                    <i class="fas fa-backspace"></i>
-                                </button>
-                            </div>
+                        <div class="col-4">
+                            <button type="button" class="btn btn-keypad w-100 py-3" data-number="3">3</button>
                         </div>
                     </div>
-
-                    <!-- Hidden Form for Submission -->
-                    <form method="POST" id="pinForm">
-                        <input type="hidden" name="input" id="pinCode">
-
-                        <div class="d-grid gap-2 mt-4">
-                            <button type="submit" name="pincode_submit" class="btn btn-verify" id="verifyBtn" disabled>
-                                <i class="fas fa-shield-check me-2"></i>Verify PIN
+                    <div class="row g-2 mb-3">
+                        <div class="col-4">
+                            <button type="button" class="btn btn-keypad w-100 py-3" data-number="4">4</button>
+                        </div>
+                        <div class="col-4">
+                            <button type="button" class="btn btn-keypad w-100 py-3" data-number="5">5</button>
+                        </div>
+                        <div class="col-4">
+                            <button type="button" class="btn btn-keypad w-100 py-3" data-number="6">6</button>
+                        </div>
+                    </div>
+                    <div class="row g-2 mb-3">
+                        <div class="col-4">
+                            <button type="button" class="btn btn-keypad w-100 py-3" data-number="7">7</button>
+                        </div>
+                        <div class="col-4">
+                            <button type="button" class="btn btn-keypad w-100 py-3" data-number="8">8</button>
+                        </div>
+                        <div class="col-4">
+                            <button type="button" class="btn btn-keypad w-100 py-3" data-number="9">9</button>
+                        </div>
+                    </div>
+                    <div class="row g-2">
+                        <div class="col-4">
+                            <button type="button" class="btn btn-keypad btn-clear w-100 py-3">
+                                <i class="fas fa-undo"></i>
                             </button>
                         </div>
-                    </form>
-
-                    <!-- Security Notice -->
-                    <div class="security-notice">
-                        <div class="d-flex align-items-center">
-                            <div class="flex-shrink-0">
-                                <i class="fas fa-info-circle text-primary"></i>
-                            </div>
-                            <div class="flex-grow-1 ms-3">
-                                <small class="text-muted">
-                                    For security reasons, please do not share your PIN with anyone. This PIN is required
-                                    to access your account.
-                                </small>
-                            </div>
+                        <div class="col-4">
+                            <button type="button" class="btn btn-keypad w-100 py-3" data-number="0">0</button>
                         </div>
+                        <div class="col-4">
+                            <button type="button" class="btn btn-keypad btn-backspace w-100 py-3">
+                                <i class="fas fa-backspace"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hidden Form for Submission -->
+                <form method="POST" id="pinForm">
+                    <input type="hidden" name="input" id="pinCode">
+
+                    <div class="d-grid gap-2 mt-4">
+                        <button type="submit" name="pincode_submit" class="btn btn-verify" id="verifyBtn" disabled>
+                            <i class="fas fa-shield-check me-2"></i>Verify PIN
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Security Notice -->
+                <div class="security-notice">
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-info-circle text-primary"></i>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <small class="text-muted">
+                                For security reasons, please do not share your PIN with anyone. This PIN is required
+                                to access your account.
+                            </small>
+                        </div>
+
+
+                    </div>
+                    <div class="translate">
+                        <?php echo $translate ?>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Bootstrap JS Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-        <script>
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             const pinInputs = document.querySelectorAll('.pin-input');
             const pinCodeInput = document.getElementById('pinCode');
@@ -515,7 +537,7 @@ if (isset($_POST['pincode_submit'])) {
                 }
             });
         });
-        </script>
-    </body>
+    </script>
+</body>
 
 </html>

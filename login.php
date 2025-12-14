@@ -127,18 +127,18 @@ if (isset($_POST['emaillogin'])) {
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> <?= $pageName  ?> - <?= $pageTitle ?> </title>
-        <meta name="description" content="<?= $pageTitle ?> Mobile Banking">
-        <link rel="shortcut icon" href="<?= $web_url ?>/admin/assets/images/logo/<?= $page['favicon'] ?>"
-            type="image/x-icon" />
-        <!-- Bootstrap 5 CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <?= $pageName  ?> - <?= $pageTitle ?> </title>
+    <meta name="description" content="<?= $pageTitle ?> Mobile Banking">
+    <link rel="shortcut icon" href="<?= $web_url ?>/admin/assets/images/logo/<?= $page['favicon'] ?>"
+        type="image/x-icon" />
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
         :root {
             --primary-color: #1F1B44;
             --secondary-color: #4A44A6;
@@ -337,13 +337,25 @@ if (isset($_POST['emaillogin'])) {
                 max-width: none;
             }
         }
-        </style>
-    </head>
+    </style>
 
-    <body>
-        <!-- Alert Container -->
-        <div class="alert-container">
-            <?php
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="translate.google.com/translate_a/fa0d8a0d8.txt?cb=googleTranslateElementInit"></script>
+</head>
+
+<body>
+    <!-- Alert Container -->
+    <div class="alert-container">
+        <?php
         // Function to show bootstrap alert
         function show_bootstrap_alert($type, $message, $title = '')
         {
@@ -396,153 +408,155 @@ if (isset($_POST['emaillogin'])) {
             unset($_SESSION['alert_title']);
         }
         ?>
-        </div>
+    </div>
 
-        <div class="container">
-            <div class="login-container">
-                <div class="row g-0">
-                    <!-- Left Side - Branding & Features -->
-                    <div class="col-lg-6 login-left">
-                        <div class="text-center mb-4">
-                            <img src="<?= $web_url ?>/admin/assets/images/logo/<?= $page['image'] ?>" alt="Wallet Logo"
-                                class="brand-logo">
-                        </div>
-                        <h2 class="mb-3">Secure Access</h2>
-                        <p class="mb-4">Manage your finances safely and conveniently with our advanced security
-                            features.</p>
-
-                        <ul class="feature-list">
-                            <li><i class="fas fa-shield-alt"></i> Bank-level security & encryption</li>
-                            <li><i class="fas fa-bolt"></i> Instant transaction processing</li>
-                            <li><i class="fas fa-mobile-alt"></i> Mobile-friendly interface</li>
-                            <li><i class="fas fa-headset"></i> 24/7 customer support</li>
-                        </ul>
-
-                        <div class="security-badge">
-                            <i class="fas fa-lock"></i> Your information is securely encrypted
-                        </div>
+    <div class="container">
+        <div class="login-container">
+            <div class="row g-0">
+                <!-- Left Side - Branding & Features -->
+                <div class="col-lg-6 login-left">
+                    <div class="text-center mb-4">
+                        <a href="<?= $web_url ?>"> <img
+                                src="<?= $web_url ?>/admin/assets/images/logo/<?= $page['image'] ?>"
+                                alt="Wallet Logo" class="brand-logo"></a>
+                        <?php echo $translate ?>
                     </div>
+                    <h2 class="mb-3">Secure Access</h2>
+                    <p class="mb-4">Manage your finances safely and conveniently with our advanced security
+                        features.</p>
 
-                    <!-- Right Side - Login Form -->
-                    <div class="col-lg-6 login-right">
-                        <h3 class="mb-4">Sign In to Your Account</h3>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-shield-alt"></i> Bank-level security & encryption</li>
+                        <li><i class="fas fa-bolt"></i> Instant transaction processing</li>
+                        <li><i class="fas fa-mobile-alt"></i> Mobile-friendly interface</li>
+                        <li><i class="fas fa-headset"></i> 24/7 customer support</li>
+                    </ul>
 
-                        <ul class="nav nav-tabs" id="loginTabs" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="account-tab" data-bs-toggle="tab"
-                                    data-bs-target="#account" type="button" role="tab" aria-controls="account"
-                                    aria-selected="true">
-                                    <i class="fas fa-user-circle me-2"></i>Account ID
+                    <div class="security-badge">
+                        <i class="fas fa-lock"></i> Your information is securely encrypted
+                    </div>
+                </div>
+
+                <!-- Right Side - Login Form -->
+                <div class="col-lg-6 login-right">
+                    <h3 class="mb-4">Sign In to Your Account</h3>
+
+                    <ul class="nav nav-tabs" id="loginTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="account-tab" data-bs-toggle="tab"
+                                data-bs-target="#account" type="button" role="tab" aria-controls="account"
+                                aria-selected="true">
+                                <i class="fas fa-user-circle me-2"></i>Account ID
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="email-tab" data-bs-toggle="tab" data-bs-target="#email"
+                                type="button" role="tab" aria-controls="email" aria-selected="false">
+                                <i class="fas fa-envelope me-2"></i>Email Access
+                            </button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content mt-3" id="loginTabsContent">
+                        <!-- Account ID Login -->
+                        <div class="tab-pane fade show active" id="account" role="tabpanel"
+                            aria-labelledby="account-tab">
+                            <form method="post" class="signin_validate">
+                                <div class="mb-3">
+                                    <label for="acct_no" class="form-label">Account ID</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                        <input type="number" class="form-control" id="acct_no" name="acct_no"
+                                            placeholder="Enter your account ID" required>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="acct_password" class="form-label">Password</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                        <input type="password" class="form-control" id="acct_password"
+                                            name="acct_password" placeholder="Enter your password" required>
+                                        <button class="btn btn-outline-secondary" type="button"
+                                            id="togglePassword1">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                                        <label class="form-check-label" for="rememberMe">Remember me</label>
+                                    </div>
+                                    <a href="reset-password.php" class="forgot-password">Forgot Password?</a>
+                                </div>
+
+                                <button type="submit" name="login" class="btn btn-login w-100 mb-3">
+                                    <i class="fas fa-sign-in-alt me-2"></i>Sign In
                                 </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="email-tab" data-bs-toggle="tab" data-bs-target="#email"
-                                    type="button" role="tab" aria-controls="email" aria-selected="false">
-                                    <i class="fas fa-envelope me-2"></i>Email Access
+
+                                <div class="text-center">
+                                    <p class="mb-0">Don't have an account?
+                                        <a href="./opening.php" class="register-link">Register here</a>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Email Login -->
+                        <div class="tab-pane fade" id="email" role="tabpanel" aria-labelledby="email-tab">
+                            <form method="post" class="signin_validate">
+                                <div class="mb-3">
+                                    <label for="acct_email" class="form-label">Email Address</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                        <input type="email" class="form-control" id="acct_email" name="acct_email"
+                                            placeholder="Enter your email address" required>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="acct_password2" class="form-label">Password</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                        <input type="password" class="form-control" id="acct_password2"
+                                            name="acct_password" placeholder="Enter your password" required>
+                                        <button class="btn btn-outline-secondary" type="button"
+                                            id="togglePassword2">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="rememberMe2">
+                                        <label class="form-check-label" for="rememberMe2">Remember me</label>
+                                    </div>
+                                    <a href="reset-password.php" class="forgot-password">Forgot Password?</a>
+                                </div>
+
+                                <button type="submit" name="emaillogin" class="btn btn-login w-100 mb-3">
+                                    <i class="fas fa-sign-in-alt me-2"></i>Sign In
                                 </button>
-                            </li>
-                        </ul>
 
-                        <div class="tab-content mt-3" id="loginTabsContent">
-                            <!-- Account ID Login -->
-                            <div class="tab-pane fade show active" id="account" role="tabpanel"
-                                aria-labelledby="account-tab">
-                                <form method="post" class="signin_validate">
-                                    <div class="mb-3">
-                                        <label for="acct_no" class="form-label">Account ID</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                            <input type="number" class="form-control" id="acct_no" name="acct_no"
-                                                placeholder="Enter your account ID" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="acct_password" class="form-label">Password</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                                            <input type="password" class="form-control" id="acct_password"
-                                                name="acct_password" placeholder="Enter your password" required>
-                                            <button class="btn btn-outline-secondary" type="button"
-                                                id="togglePassword1">
-                                                <i class="fas fa-eye"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" id="rememberMe">
-                                            <label class="form-check-label" for="rememberMe">Remember me</label>
-                                        </div>
-                                        <a href="reset-password.php" class="forgot-password">Forgot Password?</a>
-                                    </div>
-
-                                    <button type="submit" name="login" class="btn btn-login w-100 mb-3">
-                                        <i class="fas fa-sign-in-alt me-2"></i>Sign In
-                                    </button>
-
-                                    <div class="text-center">
-                                        <p class="mb-0">Don't have an account?
-                                            <a href="./opening.php" class="register-link">Register here</a>
-                                        </p>
-                                    </div>
-                                </form>
-                            </div>
-
-                            <!-- Email Login -->
-                            <div class="tab-pane fade" id="email" role="tabpanel" aria-labelledby="email-tab">
-                                <form method="post" class="signin_validate">
-                                    <div class="mb-3">
-                                        <label for="acct_email" class="form-label">Email Address</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                            <input type="email" class="form-control" id="acct_email" name="acct_email"
-                                                placeholder="Enter your email address" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="acct_password2" class="form-label">Password</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                                            <input type="password" class="form-control" id="acct_password2"
-                                                name="acct_password" placeholder="Enter your password" required>
-                                            <button class="btn btn-outline-secondary" type="button"
-                                                id="togglePassword2">
-                                                <i class="fas fa-eye"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" id="rememberMe2">
-                                            <label class="form-check-label" for="rememberMe2">Remember me</label>
-                                        </div>
-                                        <a href="reset-password.php" class="forgot-password">Forgot Password?</a>
-                                    </div>
-
-                                    <button type="submit" name="emaillogin" class="btn btn-login w-100 mb-3">
-                                        <i class="fas fa-sign-in-alt me-2"></i>Sign In
-                                    </button>
-
-                                    <div class="text-center">
-                                        <p class="mb-0">Don't have an account?
-                                            <a href="./opening.php" class="register-link">Register here</a>
-                                        </p>
-                                    </div>
-                                </form>
-                            </div>
+                                <div class="text-center">
+                                    <p class="mb-0">Don't have an account?
+                                        <a href="./opening.php" class="register-link">Register here</a>
+                                    </p>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Bootstrap JS Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-        <script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
         // Toggle password visibility
         document.getElementById('togglePassword1').addEventListener('click', function() {
             const passwordInput = document.getElementById('acct_password');
@@ -630,7 +644,7 @@ if (isset($_POST['emaillogin'])) {
                 }
             }, 5000);
         }
-        </script>
-    </body>
+    </script>
+</body>
 
 </html>
